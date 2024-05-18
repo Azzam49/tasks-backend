@@ -11,3 +11,5 @@ pip install django==5.0
 pip list
 
 django-admin startproject tasks .
+
+python manage.py migrate
