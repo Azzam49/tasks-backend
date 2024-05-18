@@ -1,0 +1,13 @@
+
+
+which python3.12
+
+sudo virtualenv -p /Library/Frameworks/Python.framework/Versions/3.12/bin/python3.12 venv
+
+source venv/bin/activate
+
+pip install django==5.0
+
+pip list
+
+django-admin startproject tasks .
