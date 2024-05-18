@@ -15,3 +15,9 @@ django-admin startproject tasks .
 python manage.py migrate
 
 python manage.py makemigrations
+
+python manage.py createsuperuser
+    - admin
+    - aqz123AQZ
+
+python manage.py changepassword admin

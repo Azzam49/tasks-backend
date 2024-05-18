@@ -1,3 +1,11 @@
 from django.contrib import admin
 
-# Register your models here.
+from app.models import Tag
+
+@admin.register(Tag)
+class TagAdmin(admin.ModelAdmin):
+
+    # displays selected fields
+    list_display = [
+        'name',
+    ]
