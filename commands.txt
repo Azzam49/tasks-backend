@@ -13,3 +13,5 @@ pip list
 django-admin startproject tasks .
 
 python manage.py migrate
+
+python manage.py makemigrations
