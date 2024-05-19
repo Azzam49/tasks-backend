@@ -1,0 +1,31 @@
+required endpoints for the project:
+
+1 - create task endpoint
+2 - read tasks endpoint
+3 - update task endpoint
+4 - delete task endpoint
+5 - change task status to completed endpoint
+6 - login token endpoint
+7 - register user endpoint
+8 - read users endpoint (for admin dashboard in react)
+9 - activate user / set status as active endpoint (for admin dashboard in react)
+10 - deactivate user / set status as non-active endpoint (for admin dashboard in react)
+11 - create a tag (for admin dashboard in react)
+12 - delete a tag (for admin dashboard in react)
+Extra:
+    - read logs endpoint
+
+Expected DB models:
+- User Model (django default) which have the fields:
+    username: A unique identifier for the user, used for authentication.
+    password: A hashed version of the user's password for security.
+    email: The user's email address.
+    first_name: The user's first name.
+    last_name: The user's last name.
+    is_staff: A boolean field indicating whether the user has access to the admin interface.
+    is_active: A boolean field indicating whether the user account is active.
+    date_joined: The date and time when the user account was created.
+- Tags Model (id, name)
+- Tasks Model (id, owner (FK with User model), title, description, tag FK, created_at, status)
+Extra:
+    - Logs Model, that saves all users actions on DB (id, action_name, action_description, action_time, user)

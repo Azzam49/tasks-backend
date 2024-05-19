@@ -1,0 +1,67 @@
+
+GENERAL_NOTES:
+    - Check and follow existing Django course on explain the DB, migrations, DB state before/after migration, Raw sql, etc..
+
+1_feature/init-project
+2_feature/create-django-app
+3_feature/django-mvc-our-first-view
+
+---------------------------------------------------------------------
+STATUS : DONE
+BRANCH : 4_feature/create-tags-model
+
+Notes:
+    - dispaly sql lite DB
+    - talk about migration files and it's 2 commands
+    - check db after applied the migration file
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+STATUS : DONE
+BRANCH : 5_feature/add-tag-model-to-admin-site
+
+Notes:
+    - Describe what is admin site
+    - user createsuperuser command
+    - set some features of admin site, (can check existing django course for that)
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+STATUS : DONE
+BRANCH : 6_feature/create-get-api-for-tags
+
+Notes:
+    - install and talk about djangorestframework
+    - talk about the used imports
+    - talk about the used orm query
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+STATUS : DONE
+BRANCH : 7_feature/create-tasks-model
+
+- Tasks Model with columns = (id, owner (FK with User model), title, description, tag (FK with Tag model), created_at, status)
+- Describe and show columns of the Django's User model
+- Import User model and Create FK relation with User model
+- Create FK relation with Tag model
+- Set values of status as options ('Completed', 'Pending')
+- Set default value for status as 'Pending'
+- Set default value for created_at the current time
+
+Notes:
+- Show the Django default User model columns
+- Talk about FK relation and ON_DELETE
+- Talk about options for status
+- Talk about default value for created_at
+- Note : might need split this branch into 2 lectures
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+STATUS : TODO
+BRANCH : 8_feature/add-tasks-model-to-admin-site
+
+- Add tasks model to admin site
+- Set some features of admin site (can check existing django course for that)
+---------------------------------------------------------------------
