@@ -27,3 +27,10 @@ class TaskSerializer(serializers.ModelSerializer):
     def get_created_at(self, obj):
         # return obj.created_at.date().isoformat()  # Convert datetime to date and format as YYYY-MM-DD
         return obj.created_at.strftime('%Y-%m-%d')  # Convert datetime to date and format as YYYY-MM-DD
+
+
+class TaskCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Task
+        fields = ['id', 'owner', 'title', 'description', 'tag', 'status']
+        read_only_fields = ['id']
