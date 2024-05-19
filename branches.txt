@@ -59,7 +59,7 @@ Notes:
 
 
 ---------------------------------------------------------------------
-STATUS : TODO
+STATUS : DONE
 BRANCH : 8_feature/add-tasks-model-to-admin-site
 
 - Add tasks model to admin site
