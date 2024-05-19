@@ -1,6 +1,8 @@
 
 GENERAL_NOTES:
     - Check and follow existing Django course on explain the DB, migrations, DB state before/after migration, Raw sql, etc..
+    - Can give lectures about (install postman, using postman)
+
 
 1_feature/init-project
 2_feature/create-django-app
@@ -78,4 +80,32 @@ BRANCH : 9_feature/create-get-tasks-api
 Note:
     - for this lecture, open React app to make sure the response of API is exact same as the useState of Tasks page
     - might need split this into 2 lectures (api view function & serializer class)
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+STATUS : WORKING-ON
+BRANCH : 10_feature/create-post-task-api
+
+- Create POST task API, it's fields shall follow the fields of dialog modal of Tasks page
+- Create the serilizer and explain it's features
+
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+STATUS : EXTRA
+BRANCH : ?_feature/optimize-the-tasks-get-api
+
+- Print raw sql to display the issue
+- Use select_related to fix the optimize
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+STATUS : EXTRA
+BRANCH : ?_feature/use-class-based-view-for-the-apis
+
+- Use Class Based Views to create same apis with same response
+    - this will let student learned both view functions and class based views
 ---------------------------------------------------------------------
