@@ -65,3 +65,17 @@ BRANCH : 8_feature/add-tasks-model-to-admin-site
 - Add tasks model to admin site
 - Set some features of admin site (can check existing django course for that)
 ---------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------
+STATUS : DONE
+BRANCH : 9_feature/create-get-tasks-api
+
+- Create GET tasks API, it's fields shall follow the fields of Tasks page
+- Create the serilizer and explain it's features
+
+Note:
+    - for this lecture, open React app to make sure the response of API is exact same as the useState of Tasks page
+    - might need split this into 2 lectures (api view function & serializer class)
+---------------------------------------------------------------------
