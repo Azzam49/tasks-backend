@@ -21,3 +21,16 @@ python manage.py createsuperuser
     - aqz123AQZ
 
 python manage.py changepassword admin
+
+
+INFO ABOUT CREATING API AS CLASS BASED AND FUNCTION BASED
+    USING DJANGO REST FRAMEWORK : https://chatgpt.com/share/c9f72284-3743-4876-bc4c-77f1e36e941f
+
+
+pip install djangorestframework
+
+INSTALLED_APPS = [
+    ...
+    'rest_framework',
+    ...
+]
