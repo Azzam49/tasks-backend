@@ -112,14 +112,14 @@ BRANCH : 12_feature/create-put-task-api
 
 
 ---------------------------------------------------------------------
-STATUS : WORKING-ON
+STATUS : DONE
 BRANCH : 13_feature/customize-serializer-for-create-update-apis
 
 - Define create/update methods on serializer to show that able customize function for create/update apis
 ---------------------------------------------------------------------
 
 ---------------------------------------------------------------------
-STATUS : TODO
+STATUS : DONE
 BRANCH : 14_feature/create-delete-task-api
 
 - Create delete task api
