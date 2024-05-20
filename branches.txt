@@ -134,6 +134,16 @@ BRANCH : 15_feature/create-api-for-change-task-status-to-completed
 ---------------------------------------------------------------------
 
 
+
+---------------------------------------------------------------------
+STATUS : DONE
+BRANCH : 16_feature/setup-corsheader-to-allow-api-call-from-frontend
+
+- install django-cors-header and setup it on settings.py
+    - pip install django-cors-headers
+---------------------------------------------------------------------
+
+
 ---------------------------------------------------------------------
 STATUS : EXTRA
 BRANCH : ?_feature/optimize-the-tasks-get-api
