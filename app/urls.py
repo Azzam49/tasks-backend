@@ -4,6 +4,7 @@ from app.views import (
     tag_list,
     task_list,
     create_task,
+    update_task,
 )
 
 urlpatterns = [
@@ -11,4 +12,5 @@ urlpatterns = [
     path('get/tags/', tag_list, name='tag-list'),
     path('get/tasks/', task_list, name='task-list'),
     path('post/task/', create_task, name='create-task'),
+    path('put/task/<id>/', update_task, name='update_task'),
 ]

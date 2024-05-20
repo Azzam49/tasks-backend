@@ -10,7 +10,7 @@ from .models import (
 )
 from .serializers import (
     TaskSerializer,
-    TaskCreateSerializer,
+    TaskCreateUpdateSerializer,
 )
 
 def home(request):
@@ -42,7 +42,7 @@ def task_list(request):
 @api_view(['POST'])
 def create_task(request):
     try:
-        serializer = TaskCreateSerializer(data=request.data)
+        serializer = TaskCreateUpdateSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)  # Raise exception on validation failure
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
@@ -53,4 +53,21 @@ def create_task(request):
         #     error_message = error_message[0]
         # else:
         #     error_message = exc.detail
+        return Response(error_message, status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['PUT'])
+def update_task(request, id):
+    try:
+        task = Task.objects.get(id=id)
+    except Task.DoesNotExist:
+        return Response({"detail": "Task not found."}, status=status.HTTP_404_NOT_FOUND)
+
+    serializer = TaskCreateUpdateSerializer(task, data=request.data)
+    try:
+        serializer.is_valid(raise_exception=True)  # Raise exception on validation failure
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    except ValidationError as exc:
+        print(f"\nexc.detail: {exc.detail}\n")
+        error_message = exc.detail
         return Response(error_message, status=status.HTTP_400_BAD_REQUEST)
