@@ -127,8 +127,8 @@ BRANCH : 14_feature/create-delete-task-api
 
 
 ---------------------------------------------------------------------
-STATUS : TODO
-BRANCH : 15_feature/create-change-task-status-to-completed-api
+STATUS : DONE
+BRANCH : 15_feature/create-api-for-change-task-status-to-completed
 
 - Create api that takes task_id and set the status to Completed
 ---------------------------------------------------------------------

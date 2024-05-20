@@ -82,3 +82,20 @@ def delete_task(request, id):
 
     task.delete()
     return Response(status=status.HTTP_200_OK)
+
+
+@api_view(['PUT'])
+def update_task_as_completed(request, id):
+    try:
+        task = Task.objects.get(id=id)
+    except Task.DoesNotExist:
+        return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
+
+    if task.status == "Completed":
+        return Response({"detail": "This task status is already set as Completed."}, status=status.HTTP_404_NOT_FOUND)
+
+    # change task status
+    task.status = "Completed"
+    task.save()
+
+    return Response(status=status.HTTP_200_OK)
