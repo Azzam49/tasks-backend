@@ -1,0 +1,124 @@
+- Finish BE API
+	- by this Wed
+
+- Integrate API with React
+    - use apis and remove all static data
+    - make alert notifcation as react-notify package
+- Authentication between API and React
+    - create django JWT token authentication
+    - use token api from react login
+    - set login page first on react, can go other pages only if authenticated
+    - store the token on react
+- Pages for Admin user
+    - create users list page
+        - read user
+        - change user status active/in-active
+    - EXTRA: create logs page
+        - read logs from db and display on table
+- Building dashboard page (plan design, design with react, create api, integrate api)
+    (first, prepare a design on dashboard eg. (whcih charts, what components to use to make it beautiful)
+    - create react components with static data on dashboard page as place holder
+    - create needed apis on backend to fill the dashboard components
+    - integrate apis with react dashboard components
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+New idea for design the course.
+Make sections of course including both videos on React & Django, to complete a specfic goal.
+
+sections initial idea:
+
+TODO - Introduction
+    - course intro lectures..
+
+TODO - Setup
+    - install react & django
+
+TODO - React Basics
+    - teach react basics
+
+TODO - Django Basics
+    - teach django bascis
+
+TODO - Our Tasks Template
+    - a look on our html template
+
+DONE : - Tasks App Frontend | Integrating the Tasks Template
+    - converting bootstrap html template to react template
+DONE : - Tasks App Backend | Creating the CRUD APIs
+    - lectures on the django project, to create apis for main tasks CRUD Operation
+
+WORKING-ON : - Tasks App Frontend | Integrating with the APIs
+    - let the FE use the backend prepared CRUD apis, to function the tasks operations
+
+TODO - Tasks App (Dashboard Page & Charts)
+    - create react components(charts, statics...) with static data on dashboard page
+    - create django apis for the components of dashboard page
+    - integrate the apis with the dashboard components
+
+TODO - Tasks App (Authentication & React Pages)
+    - token api, react login/register, permissions control based on user
+
+TODO- Tasks App (Admin Pages)
+    - create apis related to admin pages actions (create/delete tags, change users status, read logs)
+
+
+
+
+Branches of main sections:
+
+    - Tasks App Frontend | Integrating the Tasks Template
+        1_feature/clean-up-react-files-for-fresh-start
+        2_feature/integrate-bootstrap-5
+        3_feature/first-page-login-form
+        4_feature/move-login-page-as-a-react-component
+        5_feature/setup-react-router-dom
+        6_feature/use-navigate-for-go-to-home-from-login-page
+        7_feature/add-the-header-component
+        9_feature/apply-the-sidebar-component-with-react-route
+        10_feature/add-datatable-on-tasks-page
+        11_feature/use-usestate-on-tasks-datatable-records
+        12_feature/on-tasks-page-databable-set-the-correct-badge-color-on-status-column-for-tasks
+        13_feature/add-create-new-task-modal-on-tasks-page
+        14_feature/create-component-for-task-modal-form
+        15_feature/fix-sidebar-highlight-on-active-page
+        16_feature/move-tasks-datatable-as-a-component
+        17_feature/move-taskdatable-assets-into-the-components-file
+        18_feature/use-taskdatatable-component-for-pending-tasks-page
+        19_feature/add-markdone-column-on-taskdatatable-component-to-serve-pending-tasks-page
+        20_feature/use-taskdatatable-component-for-completed-tasks-page
+        21_feature/move-icons-of-taskdatatable-as-a-component
+        22_feature/read-task-tags-from-usestate
+
+
+    - Tasks App Backend | Creating the CRUD APIs
+        1_feature/init-project
+        2_feature/create-django-app
+        3_feature/django-mvc-our-first-view
+        4_feature/create-tags-model
+        5_feature/add-tag-model-to-admin-site
+        6_feature/create-get-api-for-tags
+        7_feature/create-tasks-model
+        8_feature/add-tasks-model-to-admin-site
+        9_feature/create-get-tasks-api
+        10_feature/create-post-task-api
+        11_feature/custom-validation-for-task-post-api
+        12_feature/create-put-task-api
+        13_feature/customize-serializer-for-create-update-apis
+        14_feature/create-delete-task-api
+        15_feature/create-api-for-change-task-status-to-completed
+
+
+    - Tasks App Frontend+Backend | Integrating with the APIs
+        BE : 16_feature/setup-corsheader-to-allow-api-call-from-frontend
