@@ -103,7 +103,7 @@ BRANCH : 11_feature/custom-validation-for-task-post-api
 
 
 ---------------------------------------------------------------------
-STATUS : WORKING-ON
+STATUS : DONE
 BRANCH : 12_feature/create-put-task-api
 
 - Create put task api
@@ -112,8 +112,15 @@ BRANCH : 12_feature/create-put-task-api
 
 
 ---------------------------------------------------------------------
+STATUS : WORKING-ON
+BRANCH : 13_feature/customize-serializer-for-create-update-apis
+
+- Define create/update methods on serializer to show that able customize function for create/update apis
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
 STATUS : TODO
-BRANCH : 13_feature/create-delete-task-api
+BRANCH : 14_feature/create-delete-task-api
 
 - Create delete task api
 ---------------------------------------------------------------------
@@ -121,7 +128,7 @@ BRANCH : 13_feature/create-delete-task-api
 
 ---------------------------------------------------------------------
 STATUS : TODO
-BRANCH : 14_feature/create-change-task-status-to-completed-api
+BRANCH : 15_feature/create-change-task-status-to-completed-api
 
 - Create api that takes task_id and set the status to Completed
 ---------------------------------------------------------------------

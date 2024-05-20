@@ -46,7 +46,22 @@ class TaskCreateUpdateSerializer(serializers.ModelSerializer):
     def validate(self, attrs):
         # Add any additional validation here if needed
         title = attrs.get('title')
-        print(f"\ntitle : {title}\n")
+        #print(f"\ntitle : {title}\n")
         if len(title) > 90:
             raise serializers.ValidationError({"title": "Task title cannot be more than 90 characters."})
         return attrs
+
+    def create(self, validated_data):
+        # Perform any custom actions here if needed
+        print(f"\nCreate, validated_data : {validated_data}\n")
+
+        # Call super to use the default create method
+        return super().create(validated_data)
+
+    def update(self, instance, validated_data):
+        # Perform any custom actions here if needed
+        print(f"\nUpdate, instance : {instance}")
+        print(f"Update, validated_data : {validated_data}\n")
+
+        # Call super to use the default update method
+        return super().update(instance, validated_data)
