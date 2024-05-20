@@ -2,7 +2,7 @@ required endpoints for the project:
 
 DONE - 1 - create task endpoint
 DONE - 2 - read tasks endpoint
-TODO : 3 - update task endpoint
+DONE - 3 - update task endpoint
 TODO : 4 - delete task endpoint
 TODO : 5 - change task status to completed endpoint
 6 - login token endpoint

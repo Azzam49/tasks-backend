@@ -71,3 +71,14 @@ def update_task(request, id):
         print(f"\nexc.detail: {exc.detail}\n")
         error_message = exc.detail
         return Response(error_message, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['DELETE'])
+def delete_task(request, id):
+    try:
+        task = Task.objects.get(id=id)
+    except Task.DoesNotExist:
+        return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
+
+    task.delete()
+    return Response(status=status.HTTP_200_OK)
