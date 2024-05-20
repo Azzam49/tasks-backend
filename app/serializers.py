@@ -34,3 +34,11 @@ class TaskCreateSerializer(serializers.ModelSerializer):
         model = Task
         fields = ['id', 'owner', 'title', 'description', 'tag', 'status']
         read_only_fields = ['id']
+
+    def validate(self, attrs):
+        # Add any additional validation here if needed
+        title = attrs.get('title')
+        print(f"\ntitle : {title}\n")
+        if len(title) > 90:
+            raise serializers.ValidationError({"title": "Task title cannot be more than 90 characters."})
+        return attrs

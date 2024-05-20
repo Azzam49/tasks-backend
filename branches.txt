@@ -84,12 +84,20 @@ Note:
 
 
 ---------------------------------------------------------------------
-STATUS : WORKING-ON
+STATUS : DONE
 BRANCH : 10_feature/create-post-task-api
 
 - Create POST task API, it's fields shall follow the fields of dialog modal of Tasks page
 - Create the serilizer and explain it's features
 
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+STATUS : DONE
+BRANCH : 11_feature/custom-validation-for-task-post-api
+
+- Add validate method on the post task serilizer
+- Use the valdiate method and try catch execption on view function to return error on api
 ---------------------------------------------------------------------
 
 
