@@ -1,10 +1,10 @@
 required endpoints for the project:
 
-1 - create task endpoint
-2 - read tasks endpoint
-3 - update task endpoint
-4 - delete task endpoint
-5 - change task status to completed endpoint
+DONE - 1 - create task endpoint
+DONE - 2 - read tasks endpoint
+TODO : 3 - update task endpoint
+TODO : 4 - delete task endpoint
+TODO : 5 - change task status to completed endpoint
 6 - login token endpoint
 7 - register user endpoint
 8 - read users endpoint (for admin dashboard in react)

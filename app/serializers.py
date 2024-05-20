@@ -29,10 +29,18 @@ class TaskSerializer(serializers.ModelSerializer):
         return obj.created_at.strftime('%Y-%m-%d')  # Convert datetime to date and format as YYYY-MM-DD
 
 
-class TaskCreateSerializer(serializers.ModelSerializer):
+class TaskCreateUpdateSerializer(serializers.ModelSerializer):
+    # optional if want to make it more readable, as we are passing id values
+    # also give ability to control if field is required or not on serializer level
+    # serialzier level validation happens before the database level
+    owner_id = serializers.CharField(
+        max_length=10, required=False, allow_null=True)
+    tag_id = serializers.CharField(
+        max_length=10, required=False, allow_null=True)
+
     class Meta:
         model = Task
-        fields = ['id', 'owner', 'title', 'description', 'tag', 'status']
+        fields = ['id', 'owner_id', 'title', 'description', 'tag_id', 'status']
         read_only_fields = ['id']
 
     def validate(self, attrs):

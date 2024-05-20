@@ -1,0 +1,52 @@
+- Finish BE API
+	- by this Wed
+
+- Integrate API with React
+    - use apis and remove all static data
+    - make alert notifcation as react-notify package
+- Authentication between API and React
+    - create django JWT token authentication
+    - use token api from react login
+    - set login page first on react, can go other pages only if authenticated
+    - store the token on react
+- Pages for Admin user
+    - create users list page
+        - read user
+        - change user status active/in-active
+    - EXTRA: create logs page
+        - read logs from db and display on table
+- Building dashboard page (plan design, design with react, create api, integrate api)
+    (first, prepare a design on dashboard eg. (whcih charts, what components to use to make it beautiful)
+    - create react components with static data on dashboard page as place holder
+    - create needed apis on backend to fill the dashboard components
+    - integrate apis with react dashboard components
+
+
+
+New idea for design the course.
+Make sections of course including both videos on React & Django, to complete a specfic goal.
+
+sections initial idea:
+
+- Introduction
+    - course intro lectures..
+- Setup
+    - install react & django
+- React Basics
+    - teach react basics
+- Django Basics
+    - teach django bascis
+- Our Tasks Template
+    - a look on our html template
+- React - Integrating the Tasks Template
+    - converting bootstrap html template to react template
+- Tasks App (CRUD Operation & React Pages)
+    - lectures on both react + django projects, to get a dashboard of working CRUD on tasks
+- Tasks App (Dashboard Page & Charts)
+    - create react components(charts, statics...) with static data on dashboard page
+    - create django apis for the components of dashboard page
+    - integrate the apis with the dashboard components
+- Tasks App (Authentication & React Pages)
+    - token api, react login/register, permissions control based on user
+- Tasks App (Admin Pages)
+    - create apis related to admin pages actions (create/delete tags, change users status, read logs)
