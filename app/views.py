@@ -99,3 +99,14 @@ def update_task_as_completed(request, id):
     task.save()
 
     return Response(status=status.HTTP_200_OK)
+
+
+@api_view(['GET'])
+def get_task_by_id(request, id):
+    try:
+        task = Task.objects.get(id=id)
+    except Task.DoesNotExist:
+        return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
+
+    serializer = TaskSerializer(task)
+    return Response(serializer.data)

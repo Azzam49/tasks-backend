@@ -7,6 +7,7 @@ from app.views import (
     update_task,
     delete_task,
     update_task_as_completed,
+    get_task_by_id,
 )
 
 urlpatterns = [
@@ -17,4 +18,5 @@ urlpatterns = [
     path('put/task/<id>/', update_task, name='update_task'),
     path('delete/task/<id>/', delete_task, name='delete_task'),
     path('put/task-to-completed/<id>/', update_task_as_completed, name='update_task_as_completed'),
+    path('get/task/<id>/', get_task_by_id, name='get_task_by_id'),
 ]
