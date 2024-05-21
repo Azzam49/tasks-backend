@@ -122,3 +122,12 @@ Branches of main sections:
 
     - Tasks App Frontend+Backend | Integrating with the APIs
         BE : 16_feature/setup-corsheader-to-allow-api-call-from-frontend
+        FE : 23_feature/using-the-backend-api-to-read-the-tasks
+        FE : 24_feature/using-the-backend-api-to-read-the-tags
+        FE : 25_feature/orgnize-the-api-calling
+        FE : 26_feature/using-the-backend-api-to-delete-task-on-tasks-page
+        FE : 27_feature/add-notifcation-on-delete-task
+        FE : 28_feature/using-the-backend-post-api-to-create-task
+        FE : 29_feature/close-modal-after-creating-task-and-refresh-datatable
+        BE : WORKING-ON 17_feature/create-api-for-fetch-single-task-by-id
+        FE : WORKING-ON 30_feature/using-the-backend-put-api-to-update-task

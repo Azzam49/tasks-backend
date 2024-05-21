@@ -145,6 +145,13 @@ BRANCH : 16_feature/setup-corsheader-to-allow-api-call-from-frontend
 
 
 ---------------------------------------------------------------------
+STATUS : WORKING-ON
+BRANCH : 17_feature/create-api-for-fetch-single-task-by-id
+
+- Create api that fetches single task by id
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
 STATUS : EXTRA
 BRANCH : ?_feature/optimize-the-tasks-get-api
 
