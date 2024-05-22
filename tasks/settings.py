@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+from datetime import timedelta
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -129,3 +130,15 @@ STATIC_URL = '/static/'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+}
+
+#https://django-rest-framework-simplejwt.readthedocs.io/en/latest/settings.html#settings
+SIMPLE_JWT = {
+    # controls for how long the token can be used
+    "ACCESS_TOKEN_LIFETIME": timedelta(days=1), #minutes/seconds
+}

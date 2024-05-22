@@ -59,7 +59,7 @@ DONE : - Tasks App Frontend | Integrating the Tasks Template
 DONE : - Tasks App Backend | Creating the CRUD APIs
     - lectures on the django project, to create apis for main tasks CRUD Operation
 
-WORKING-ON : - Tasks App Frontend | Integrating with the APIs
+DONE : - Tasks App Frontend | Integrating with the APIs
     - let the FE use the backend prepared CRUD apis, to function the tasks operations
 
 TODO - Tasks App (Dashboard Page & Charts)
@@ -67,7 +67,7 @@ TODO - Tasks App (Dashboard Page & Charts)
     - create django apis for the components of dashboard page
     - integrate the apis with the dashboard components
 
-TODO - Tasks App (Authentication & React Pages)
+WORKING-ON - Tasks App (Authentication & React Pages)
     - token api, react login/register, permissions control based on user
 
 TODO- Tasks App (Admin Pages)
@@ -133,5 +133,10 @@ Branches of main sections:
         FE : 30_feature/using-the-backend-put-api-to-update-task
         BE : 18_feature/create-api-for-fetch-pending-tasks
         FE : 31_feature/adding-apis-for-pending-tasks-page
-        BE : WORKING-ON 19_feature/create-api-for-fetch-completed-tasks
-        FE : WORKING-ON 32_feature/adding-apis-for-completed-tasks-page
+        BE : 19_feature/create-api-for-fetch-completed-tasks
+        FE : 32_feature/adding-apis-for-completed-tasks-page
+        FE : 33_bugfix/fix-updating-same-task-on-tasks-page
+
+
+    - Tasks App (Authentication & React Pages)
+        BE : 20_feature/setup-jwt-token-authentication
