@@ -8,12 +8,14 @@ from app.views import (
     delete_task,
     update_task_as_completed,
     get_task_by_id,
+    task_pending_list,
 )
 
 urlpatterns = [
     path('', home, name='home'),
     path('get/tags/', tag_list, name='tag-list'),
     path('get/tasks/', task_list, name='task-list'),
+    path('get/pending-tasks/', task_pending_list, name='task-pending-list'),
     path('post/task/', create_task, name='create-task'),
     path('put/task/<id>/', update_task, name='update_task'),
     path('delete/task/<id>/', delete_task, name='delete_task'),

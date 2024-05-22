@@ -31,6 +31,12 @@ def task_list(request):
     serializer = TaskSerializer(tasks, many=True)
     return Response(serializer.data)
 
+@api_view(['GET'])
+def task_pending_list(request):
+    tasks = Task.objects.filter(status='Pending')
+    serializer = TaskSerializer(tasks, many=True)
+    return Response(serializer.data)
+
 # @api_view(['POST'])
 # def create_task(request):
 #     serializer = TaskCreateSerializer(data=request.data)
