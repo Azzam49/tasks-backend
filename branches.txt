@@ -161,11 +161,26 @@ BRANCH : 18_feature/create-api-for-fetch-pending-tasks
 
 
 ---------------------------------------------------------------------
-STATUS : WORKING-ON
+STATUS : DONE
 BRANCH : 19_feature/create-api-for-fetch-completed-tasks
 
 - Create api that fetches tasks with completed status
 ---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+STATUS : DONE
+BRANCH : 20_feature/setup-jwt-token-authentication
+
+- Setup jwt token authentication
+- Create token-auth api
+- Secure api to require token authentication
+
+useful:
+    - https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html
+    - pip install djangorestframework-jwt
+---------------------------------------------------------------------
+
 
 ---------------------------------------------------------------------
 STATUS : EXTRA

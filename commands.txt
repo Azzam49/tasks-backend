@@ -34,3 +34,8 @@ INSTALLED_APPS = [
     'rest_framework',
     ...
 ]
+
+
+
+pip install djangorestframework-jwt
+https://django-rest-framework-simplejwt.readthedocs.io/en/latest/getting_started.html
