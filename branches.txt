@@ -153,12 +153,19 @@ BRANCH : 17_feature/create-api-for-fetch-single-task-by-id
 
 
 ---------------------------------------------------------------------
-STATUS : WORKING-ON
+STATUS : DONE
 BRANCH : 18_feature/create-api-for-fetch-pending-tasks
 
 - Create api that fetches tasks with pending status
 ---------------------------------------------------------------------
 
+
+---------------------------------------------------------------------
+STATUS : WORKING-ON
+BRANCH : 19_feature/create-api-for-fetch-completed-tasks
+
+- Create api that fetches tasks with completed status
+---------------------------------------------------------------------
 
 ---------------------------------------------------------------------
 STATUS : EXTRA

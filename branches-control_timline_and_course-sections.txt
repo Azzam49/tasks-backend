@@ -132,4 +132,6 @@ Branches of main sections:
         BE : 17_feature/create-api-for-fetch-single-task-by-id
         FE : 30_feature/using-the-backend-put-api-to-update-task
         BE : 18_feature/create-api-for-fetch-pending-tasks
-        FE : WORKING-ON 31_feature/adding-apis-for-pending-tasks-page
+        FE : 31_feature/adding-apis-for-pending-tasks-page
+        BE : WORKING-ON 19_feature/create-api-for-fetch-completed-tasks
+        FE : WORKING-ON 32_feature/adding-apis-for-completed-tasks-page
