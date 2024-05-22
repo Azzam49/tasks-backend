@@ -129,5 +129,7 @@ Branches of main sections:
         FE : 27_feature/add-notifcation-on-delete-task
         FE : 28_feature/using-the-backend-post-api-to-create-task
         FE : 29_feature/close-modal-after-creating-task-and-refresh-datatable
-        BE : WORKING-ON 17_feature/create-api-for-fetch-single-task-by-id
-        FE : WORKING-ON 30_feature/using-the-backend-put-api-to-update-task
+        BE : 17_feature/create-api-for-fetch-single-task-by-id
+        FE : 30_feature/using-the-backend-put-api-to-update-task
+        BE : 18_feature/create-api-for-fetch-pending-tasks
+        FE : WORKING-ON 31_feature/adding-apis-for-pending-tasks-page
