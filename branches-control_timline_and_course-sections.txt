@@ -64,8 +64,15 @@ DONE : - Tasks App Frontend | Integrating with the APIs
 
 TODO - Tasks App (Dashboard Page & Charts)
     - create react components(charts, statics...) with static data on dashboard page
+        *charts are:
+            - 3 card info (total no. of tasks, no. pending tasks, no. completed tasks)
+            - circled chart for no. of tasks per Tag
+            - line chart for tickets completed timeline with date
     - create django apis for the components of dashboard page
     - integrate the apis with the dashboard components
+    - fix all read apis (including the chart apis) to return tasks data based on the logged-in request user
+        - expect for is_staff=True/admin-users they can display all tasks on all read apis
+    - fix token-auth endpoint to return username on json response , store it on user context and use it on dashboard welcome message
 
 WORKING-ON - Tasks App (Authentication & React Pages)
     - token api, react login/register, permissions control based on user
@@ -138,5 +145,13 @@ Branches of main sections:
         FE : 33_bugfix/fix-updating-same-task-on-tasks-page
 
 
-    - Tasks App (Authentication & React Pages)
+    - (WORKING-ON) Tasks App (Authentication & React Pages)
         BE : 20_feature/setup-jwt-token-authentication
+        FE : 34_feature/function-login-page-to-send-token-request
+        FE : 35_feature/add-validation-and-notification-on-login-page
+        FE : 36_feature/use-token-on-all-api-requests
+        FE : 37_feature/function-the-logout-button-and-redirect-to-login-page-if-api-is-unautherized
+        FE : WORKING-ON 38_feature/fix-notifcation-and-standardlize-them-from-api-controller
+            BE(together with FE 38_feature/..) : WORKING-ON 21_bugfix/fix-response-of-task-to-completed-api
+
+    - (TODO) Tasks App (Dashboard Page & Charts)
