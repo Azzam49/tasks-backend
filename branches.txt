@@ -183,11 +183,26 @@ useful:
 
 
 ---------------------------------------------------------------------
-STATUS : WORKING-ON
+STATUS : DONE
 BRANCH : 21_bugfix/fix-response-of-task-to-completed-api
 
 - return a dict to fix error on react side when json parsing the response
     - this is part of fixes of the FE : 38_feature/fix-notifcation-and-standardlize-them-from-api-controller
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+STATUS : WORKING-ON
+BRANCH : 22_feature/create-register-user-api
+
+- Create register user api
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+STATUS : TODO
+BRANCH : 23_feature/add-username-and-userid-on-token-api-response
+
+- Add username and user-id data on the token/ endpoint with the access token
 ---------------------------------------------------------------------
 
 

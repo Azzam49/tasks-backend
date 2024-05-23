@@ -151,7 +151,9 @@ Branches of main sections:
         FE : 35_feature/add-validation-and-notification-on-login-page
         FE : 36_feature/use-token-on-all-api-requests
         FE : 37_feature/function-the-logout-button-and-redirect-to-login-page-if-api-is-unautherized
-        FE : WORKING-ON 38_feature/fix-notifcation-and-standardlize-them-from-api-controller
-            BE(together with FE 38_feature/..) : WORKING-ON 21_bugfix/fix-response-of-task-to-completed-api
+        FE : 38_feature/fix-notifcation-and-standardlize-them-from-api-controller
+            BE(together with FE 38_feature/..) : 21_bugfix/fix-response-of-task-to-completed-api
+        BE : 22_feature/create-register-user-api
+        FE : TODO 39_feature/add-and-integrate-register-user-page
 
     - (TODO) Tasks App (Dashboard Page & Charts)
