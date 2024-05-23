@@ -119,7 +119,8 @@ def update_task_as_completed(request, id):
     task.status = "Completed"
     task.save()
 
-    return Response(status=status.HTTP_200_OK)
+    # without return {} it returns nothing and by nothing the react was facing json parse error
+    return Response({}, status=status.HTTP_200_OK)
 
 
 @api_view(['GET'])

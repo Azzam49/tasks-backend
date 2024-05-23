@@ -183,6 +183,15 @@ useful:
 
 
 ---------------------------------------------------------------------
+STATUS : WORKING-ON
+BRANCH : 21_bugfix/fix-response-of-task-to-completed-api
+
+- return a dict to fix error on react side when json parsing the response
+    - this is part of fixes of the FE : 38_feature/fix-notifcation-and-standardlize-them-from-api-controller
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
 STATUS : EXTRA
 BRANCH : ?_feature/optimize-the-tasks-get-api
 
