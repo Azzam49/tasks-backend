@@ -10,6 +10,7 @@ from app.views import (
     get_task_by_id,
     task_pending_list,
     task_completed_list,
+    register_user,
 )
 
 urlpatterns = [
@@ -23,4 +24,5 @@ urlpatterns = [
     path('delete/task/<id>/', delete_task, name='delete_task'),
     path('put/task-to-completed/<id>/', update_task_as_completed, name='update_task_as_completed'),
     path('get/task/<id>/', get_task_by_id, name='get_task_by_id'),
+    path('post/register-user/', register_user, name='register-user'),
 ]
