@@ -73,6 +73,7 @@ TODO - Tasks App (Dashboard Page & Charts)
     - fix all read apis (including the chart apis) to return tasks data based on the logged-in request user
         - expect for is_staff=True/admin-users they can display all tasks on all read apis
     - fix token-auth endpoint to return username on json response , store it on user context and use it on dashboard welcome message
+    - add 404 page
 
 WORKING-ON - Tasks App (Authentication & React Pages)
     - token api, react login/register, permissions control based on user
@@ -154,6 +155,7 @@ Branches of main sections:
         FE : 38_feature/fix-notifcation-and-standardlize-them-from-api-controller
             BE(together with FE 38_feature/..) : 21_bugfix/fix-response-of-task-to-completed-api
         BE : 22_feature/create-register-user-api
-        FE : TODO 39_feature/add-and-integrate-register-user-page
+        FE : WORKING-ON 39_feature/add-and-integrate-register-user-page
+            BE(together with FE 39_feature/..) : 23_feature/remove-authentication-required-from-register-user-api
 
     - (TODO) Tasks App (Dashboard Page & Charts)
