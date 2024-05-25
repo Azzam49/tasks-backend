@@ -191,12 +191,18 @@ BRANCH : 21_bugfix/fix-response-of-task-to-completed-api
 ---------------------------------------------------------------------
 
 ---------------------------------------------------------------------
-STATUS : WORKING-ON
+STATUS : DONE
 BRANCH : 22_feature/create-register-user-api
 
 - Create register user api
 ---------------------------------------------------------------------
 
+---------------------------------------------------------------------
+STATUS : WORKING-ON
+BRANCH : 23_feature/remove-authentication-required-from-register-user-api
+
+- remove authentication required on register user api
+---------------------------------------------------------------------
 
 ---------------------------------------------------------------------
 STATUS : TODO
