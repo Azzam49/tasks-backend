@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.models import User
+from django.utils import timezone
 from rest_framework.decorators import api_view, permission_classes, authentication_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
@@ -118,6 +119,7 @@ def update_task_as_completed(request, id):
 
     # change task status
     task.status = "Completed"
+    task.completed_at = timezone.now()
     task.save()
 
     # without return {} it returns nothing and by nothing the react was facing json parse error

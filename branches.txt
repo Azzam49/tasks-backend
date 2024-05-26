@@ -198,11 +198,31 @@ BRANCH : 22_feature/create-register-user-api
 ---------------------------------------------------------------------
 
 ---------------------------------------------------------------------
-STATUS : WORKING-ON
+STATUS : DONE
 BRANCH : 23_feature/remove-authentication-required-from-register-user-api
 
 - remove authentication required on register user api
 ---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+STATUS : DONE
+BRANCH : 24_bugfix/fix-task-timestamps-for-charts-data
+
+- Need remove attribute auto_add_now of task.created_at column to make it show on admin site
+    - Then modify create_task api to save the current time on task.created_at
+- Add completed_at column on Task model and store it value when completed task api is triggered
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
+STATUS : TODO
+BRANCH : 25_feature/create-api-for-dashboard-charts-data
+
+- Create api that provides data for all charts of dashboard page
+---------------------------------------------------------------------
+
+
+
 
 ---------------------------------------------------------------------
 STATUS : TODO
