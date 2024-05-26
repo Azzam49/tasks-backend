@@ -62,7 +62,10 @@ DONE : - Tasks App Backend | Creating the CRUD APIs
 DONE : - Tasks App Frontend | Integrating with the APIs
     - let the FE use the backend prepared CRUD apis, to function the tasks operations
 
-TODO - Tasks App (Dashboard Page & Charts)
+DONE - Tasks App (Authentication & React Pages)
+    - token api, react login/register, permissions control based on user
+
+WORKING-ON - Tasks App (Dashboard Page & Charts)
     - create react components(charts, statics...) with static data on dashboard page
         *charts are:
             - 3 card info (total no. of tasks, no. pending tasks, no. completed tasks)
@@ -75,9 +78,6 @@ TODO - Tasks App (Dashboard Page & Charts)
     - fix token-auth endpoint to return username on json response , store it on user context and use it on dashboard welcome message
     - add 404 page
 
-WORKING-ON - Tasks App (Authentication & React Pages)
-    - token api, react login/register, permissions control based on user
-
 TODO- Tasks App (Admin Pages)
     - create apis related to admin pages actions (create/delete tags, change users status, read logs)
 
@@ -86,7 +86,7 @@ TODO- Tasks App (Admin Pages)
 
 Branches of main sections:
 
-    - Tasks App Frontend | Integrating the Tasks Template
+    - DONE - Tasks App Frontend | Integrating the Tasks Template
         1_feature/clean-up-react-files-for-fresh-start
         2_feature/integrate-bootstrap-5
         3_feature/first-page-login-form
@@ -110,7 +110,7 @@ Branches of main sections:
         22_feature/read-task-tags-from-usestate
 
 
-    - Tasks App Backend | Creating the CRUD APIs
+    - DONE - Tasks App Backend | Creating the CRUD APIs
         1_feature/init-project
         2_feature/create-django-app
         3_feature/django-mvc-our-first-view
@@ -128,7 +128,7 @@ Branches of main sections:
         15_feature/create-api-for-change-task-status-to-completed
 
 
-    - Tasks App Frontend+Backend | Integrating with the APIs
+    - DONE - Tasks App Frontend+Backend | Integrating with the APIs
         BE : 16_feature/setup-corsheader-to-allow-api-call-from-frontend
         FE : 23_feature/using-the-backend-api-to-read-the-tasks
         FE : 24_feature/using-the-backend-api-to-read-the-tags
@@ -146,7 +146,7 @@ Branches of main sections:
         FE : 33_bugfix/fix-updating-same-task-on-tasks-page
 
 
-    - (WORKING-ON) Tasks App (Authentication & React Pages)
+    - DONE - Tasks App (Authentication & React Pages)
         BE : 20_feature/setup-jwt-token-authentication
         FE : 34_feature/function-login-page-to-send-token-request
         FE : 35_feature/add-validation-and-notification-on-login-page
@@ -155,7 +155,11 @@ Branches of main sections:
         FE : 38_feature/fix-notifcation-and-standardlize-them-from-api-controller
             BE(together with FE 38_feature/..) : 21_bugfix/fix-response-of-task-to-completed-api
         BE : 22_feature/create-register-user-api
-        FE : WORKING-ON 39_feature/add-and-integrate-register-user-page
+        FE : 39_feature/add-and-integrate-register-user-page
             BE(together with FE 39_feature/..) : 23_feature/remove-authentication-required-from-register-user-api
 
-    - (TODO) Tasks App (Dashboard Page & Charts)
+    - (WORKING-ON) Tasks App (Dashboard Page & Charts)
+        FE : 40_feature/dashboard-page-adding-card-component
+        FE : 41_feature/dashboard-page-adding-charts
+        FE : 42_bugfix/fix-empty-space-on-pages-on-mobile-screens
+        BE : 24_bugfix/fix-task-timestamps-for-charts-data

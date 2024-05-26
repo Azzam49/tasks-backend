@@ -1,3 +1,4 @@
+from django.utils import timezone
 from rest_framework import serializers
 from .models import Task
 
@@ -54,6 +55,8 @@ class TaskCreateUpdateSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         # Perform any custom actions here if needed
         print(f"\nCreate, validated_data : {validated_data}\n")
+
+        validated_data['created_at'] = timezone.now()
 
         # Call super to use the default create method
         return super().create(validated_data)
