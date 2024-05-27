@@ -165,3 +165,4 @@ Branches of main sections:
         BE : 24_bugfix/fix-task-timestamps-for-charts-data
         FE : 43_bugfix/fix-data-and-placeholders-of-the-dashboard-charts
         BE : 25_feature/create-api-for-dashboard-charts-data
+        BE : 26_feature/add-username-and-userid-on-token-api-response

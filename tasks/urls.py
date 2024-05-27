@@ -15,14 +15,35 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.contrib.auth.models import User
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
 )
+from rest_framework_simplejwt.serializers import (
+    TokenObtainPairSerializer,
+)
+
+
+class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
+    def validate(self, attrs):
+        data = super().validate(attrs)
+
+        data.update({
+            'user_id': self.user.id,
+            'username': self.user.username,
+        })
+
+        return data
+
+class CustomTokenObtainPairView(TokenObtainPairView):
+    serializer_class = CustomTokenObtainPairSerializer
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('app.urls')),
 
     # Token api using 'POST' request
-    path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    # path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('token/', CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),
 ]
