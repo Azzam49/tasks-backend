@@ -11,6 +11,7 @@ from app.views import (
     task_pending_list,
     task_completed_list,
     register_user,
+    charts_data,
 )
 
 urlpatterns = [
@@ -25,4 +26,6 @@ urlpatterns = [
     path('put/task-to-completed/<id>/', update_task_as_completed, name='update_task_as_completed'),
     path('get/task/<id>/', get_task_by_id, name='get_task_by_id'),
     path('post/register-user/', register_user, name='register-user'),
+
+    path('get/charts-data/', charts_data, name='charts-data'),
 ]
