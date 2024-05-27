@@ -215,7 +215,7 @@ BRANCH : 24_bugfix/fix-task-timestamps-for-charts-data
 ---------------------------------------------------------------------
 
 ---------------------------------------------------------------------
-STATUS : TODO
+STATUS : DONE
 BRANCH : 25_feature/create-api-for-dashboard-charts-data
 
 - Create api that provides data for all charts of dashboard page

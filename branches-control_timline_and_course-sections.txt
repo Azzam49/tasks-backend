@@ -163,3 +163,5 @@ Branches of main sections:
         FE : 41_feature/dashboard-page-adding-charts
         FE : 42_bugfix/fix-empty-space-on-pages-on-mobile-screens
         BE : 24_bugfix/fix-task-timestamps-for-charts-data
+        FE : 43_bugfix/fix-data-and-placeholders-of-the-dashboard-charts
+        BE : 25_feature/create-api-for-dashboard-charts-data

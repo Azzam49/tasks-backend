@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.utils import timezone
+from django.db.models import Count, F
+from datetime import timedelta
 from rest_framework.decorators import api_view, permission_classes, authentication_classes
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
@@ -159,3 +161,61 @@ def register_user(request):
     user = User.objects.create_user(username=username, password=password, email=email)
 
     return Response({'message': 'User created successfully.'}, status=status.HTTP_201_CREATED)
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def charts_data(request):
+
+    # Get the total number of tasks, and count by status
+    total_tasks_count = Task.objects.count()
+    pending_tasks_count = Task.objects.filter(status='Pending').count()
+    completed_tasks_count = Task.objects.filter(status='Completed').count()
+
+    # Get the count of tasks for each tag
+    tags_data = Tag.objects.annotate(task_count=Count('task')).values('name', 'task_count')
+    tag_labels = [tag['name'] for tag in tags_data]
+    tag_values = [tag['task_count'] for tag in tags_data]
+
+    # Get the count of completed tasks per day for the last 10 days
+    today = timezone.now().date()
+    ten_days_ago = today - timedelta(days=9)  # adjust to get full range of 10 days
+    #
+    completed_tasks_data = Task.objects.filter(
+        completed_at__date__gte=ten_days_ago,
+        status='Completed'
+    ).values(
+        day=F('completed_at__date')
+    ).annotate(
+        count=Count('id')
+    ).order_by('day')
+    #
+    # print(f"\n\nORM - completed_tasks_data : {completed_tasks_data}\n\n")
+    # print result : #ORM - completed_tasks_data : <QuerySet [{'day': datetime.date(2024, 5, 26), 'count': 1}]>
+    # Create a dictionary to map each date to its task count
+    task_date_count = {task['day']: task['count'] for task in completed_tasks_data}
+    # Generate the full list of dates in the last 10 days
+    completed_task_labels = [(today - timedelta(days=i)).strftime('%b %d') for i in range(9, -1, -1)]
+    # `i` starts at 9, stops at `-1`, each iterate it get decreased by `-1`
+    completed_task_values = [
+        task_date_count.get(today - timedelta(days=i), 0)  # Get the count if exists, else 0
+        for i in range(9, -1, -1)
+    ]
+    #
+    # print(f"\n\ncompleted_task_labels : {completed_task_labels}, len: {len(completed_task_labels)}")
+    # print(f"completed_task_values : {completed_task_values}")
+    # print(f"task_date_count : {task_date_count}")
+    # print(f"fixed - task_values : {task_values}\n\n")
+
+    data = {
+        'total_tasks_count': total_tasks_count,
+        'pending_tasks_count': pending_tasks_count,
+        'completed_tasks_count': completed_tasks_count,
+
+        'tag_labels': tag_labels,
+        'tag_values': tag_values,
+
+        'completed_task_labels': completed_task_labels,
+        'completed_task_values': completed_task_values
+    }
+    return Response(data)
