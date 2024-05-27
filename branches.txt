@@ -225,8 +225,8 @@ BRANCH : 25_feature/create-api-for-dashboard-charts-data
 
 
 ---------------------------------------------------------------------
-STATUS : TODO
-BRANCH : 23_feature/add-username-and-userid-on-token-api-response
+STATUS : DONE
+BRANCH : 26_feature/add-username-and-userid-on-token-api-response
 
 - Add username and user-id data on the token/ endpoint with the access token
 ---------------------------------------------------------------------
