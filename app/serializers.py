@@ -75,3 +75,18 @@ class TaskCreateUpdateSerializer(serializers.ModelSerializer):
 
         # Call super to use the default update method
         return super().update(instance, validated_data)
+
+
+class SingleTaskSerializer(serializers.ModelSerializer):
+    owner = serializers.SerializerMethodField('get_owner')
+    created_at = serializers.SerializerMethodField('get_created_at')
+
+    class Meta:
+        model = Task
+        fields = ['id', 'owner', 'title', 'description', 'tag_id', 'created_at', 'status']
+
+    def get_owner(self, obj):
+        return obj.owner.username
+
+    def get_created_at(self, obj):
+        return obj.created_at.strftime('%Y-%m-%d')  # Convert datetime to date and format as YYYY-MM-DD
