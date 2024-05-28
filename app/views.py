@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.models import User
 from django.utils import timezone
-from django.db.models import Count, F
+from django.db.models import Count, F, Case, When, IntegerField
 from datetime import timedelta
 from rest_framework.decorators import api_view, permission_classes, authentication_classes
 from rest_framework.permissions import IsAuthenticated
@@ -34,21 +34,33 @@ def tag_list(request):
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def task_list(request):
-    tasks = Task.objects.all()
+    if request.user.is_staff:
+        tasks = Task.objects.all()
+    else:
+        tasks = Task.objects.filter(owner=request.user)
+
     serializer = TaskSerializer(tasks, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def task_pending_list(request):
-    tasks = Task.objects.filter(status='Pending')
+    if request.user.is_staff:
+        tasks = Task.objects.filter(status='Pending')
+    else:
+        tasks = Task.objects.filter(owner=request.user, status='Pending')
+
     serializer = TaskSerializer(tasks, many=True)
     return Response(serializer.data)
 
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def task_completed_list(request):
-    tasks = Task.objects.filter(status='Completed')
+    if request.user.is_staff:
+        tasks = Task.objects.filter(status='Completed')
+    else:
+        tasks = Task.objects.filter(owner=request.user, status='Completed')
+
     serializer = TaskSerializer(tasks, many=True)
     return Response(serializer.data)
 
@@ -167,13 +179,30 @@ def register_user(request):
 @permission_classes([IsAuthenticated])
 def charts_data(request):
 
+    user = request.user
+    if user.is_staff:
+        tasks = Task.objects.all()
+    else:
+        tasks = Task.objects.filter(owner=user)
+
     # Get the total number of tasks, and count by status
-    total_tasks_count = Task.objects.count()
-    pending_tasks_count = Task.objects.filter(status='Pending').count()
-    completed_tasks_count = Task.objects.filter(status='Completed').count()
+    total_tasks_count = tasks.count() #Task.objects.count()
+    pending_tasks_count = tasks.filter(status='Pending').count() #Task.objects.filter(status='Pending').count()
+    completed_tasks_count = tasks.filter(status='Completed').count() #Task.objects.filter(status='Completed').count()
 
     # Get the count of tasks for each tag
-    tags_data = Tag.objects.annotate(task_count=Count('task')).values('name', 'task_count')
+    # tags_data = Tag.objects.annotate(task_count=Count('task')).values('name', 'task_count')
+    if user.is_staff:
+        tags_data = Tag.objects.annotate(task_count=Count('task')).values('name', 'task_count')
+    else:
+        tags_data = Tag.objects.annotate(
+            task_count=Count(
+                Case(
+                    When(task__owner=user, then=1),
+                    output_field=IntegerField()
+                )
+            )
+        ).values('name', 'task_count')
     tag_labels = [tag['name'] for tag in tags_data]
     tag_values = [tag['task_count'] for tag in tags_data]
 
@@ -181,7 +210,8 @@ def charts_data(request):
     today = timezone.now().date()
     ten_days_ago = today - timedelta(days=9)  # adjust to get full range of 10 days
     #
-    completed_tasks_data = Task.objects.filter(
+    # completed_tasks_data = Task.objects.filter(
+    completed_tasks_data = tasks.filter(
         completed_at__date__gte=ten_days_ago,
         status='Completed'
     ).values(
