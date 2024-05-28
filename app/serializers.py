@@ -1,6 +1,13 @@
 from django.utils import timezone
 from rest_framework import serializers
-from .models import Task
+from .models import Task, Tag
+
+
+class TagSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Tag
+        fields = ['id', 'name']
+
 
 class TaskSerializer(serializers.ModelSerializer):
     # this first way

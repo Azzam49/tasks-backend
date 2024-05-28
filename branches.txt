@@ -239,6 +239,15 @@ BRANCH : 27_feature/modify-all-endpoints-to-use-tasks-data-that-linked-with-the-
 - Modify all endpoints to return data based on the request user, this includes datatables and charts data
 ---------------------------------------------------------------------
 
+
+---------------------------------------------------------------------
+STATUS : DONE
+BRANCH : 28_bugfix/fix-get-tags-api-to-return-both-id-and-name-on-response
+
+- Fix get tags api so that response include both id and tag name and not only tag name
+---------------------------------------------------------------------
+
+
 ---------------------------------------------------------------------
 STATUS : EXTRA
 BRANCH : ?_feature/optimize-the-tasks-get-api

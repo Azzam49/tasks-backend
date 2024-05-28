@@ -14,6 +14,7 @@ from .models import (
     Task,
 )
 from .serializers import (
+    TagSerializer,
     TaskSerializer,
     TaskCreateUpdateSerializer,
 )
@@ -25,10 +26,10 @@ def home(request):
 @api_view(['GET'])
 @permission_classes([IsAuthenticated])
 def tag_list(request):
-    #tags = Tag.objects.all()
-    tags_name = Tag.objects.values_list('name', flat=True)
+    tags = Tag.objects.all()
+    serializer = TagSerializer(tags, many=True)
     #print(f"\ntags_name : {tags_name}\n")
-    return Response(tags_name)
+    return Response(serializer.data)
 
 
 @api_view(['GET'])
