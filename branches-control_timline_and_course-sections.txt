@@ -170,5 +170,5 @@ Branches of main sections:
         FE : 45_feature/use-charts-data-api-on-dashboard
         BE : 27_feature/modify-all-endpoints-to-use-tasks-data-that-linked-with-the-request-user
         FE : 46_feature/add-404-not-found-page
-        BE : 28_bugfix/fix-get-tags-api-to-return-both-id-and-name-on-response
-        FE : TODO 47_bugfix/fix-tag-value-on-task-create-and-update-apis
+        BE : 28_bugfix/fix-get-tags-api-to-return-both-id-and-name-on-response-and-tag-id-on-get-task-api-response
+        FE : 47_bugfix/fix-tag-value-on-task-create-and-update-apis

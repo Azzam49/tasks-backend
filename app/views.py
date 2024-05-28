@@ -17,6 +17,7 @@ from .serializers import (
     TagSerializer,
     TaskSerializer,
     TaskCreateUpdateSerializer,
+    SingleTaskSerializer,
 )
 
 def home(request):
@@ -149,7 +150,7 @@ def get_task_by_id(request, id):
     except Task.DoesNotExist:
         return Response({"detail": "Not found."}, status=status.HTTP_404_NOT_FOUND)
 
-    serializer = TaskSerializer(task)
+    serializer = SingleTaskSerializer(task)
     return Response(serializer.data)
 
 
