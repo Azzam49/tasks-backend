@@ -233,6 +233,13 @@ BRANCH : 26_feature/add-username-and-userid-on-token-api-response
 
 
 ---------------------------------------------------------------------
+STATUS : DONE
+BRANCH : 27_feature/modify-all-endpoints-to-use-tasks-data-that-linked-with-the-request-user
+
+- Modify all endpoints to return data based on the request user, this includes datatables and charts data
+---------------------------------------------------------------------
+
+---------------------------------------------------------------------
 STATUS : EXTRA
 BRANCH : ?_feature/optimize-the-tasks-get-api
 

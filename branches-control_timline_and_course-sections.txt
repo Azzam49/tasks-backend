@@ -166,3 +166,7 @@ Branches of main sections:
         FE : 43_bugfix/fix-data-and-placeholders-of-the-dashboard-charts
         BE : 25_feature/create-api-for-dashboard-charts-data
         BE : 26_feature/add-username-and-userid-on-token-api-response
+        FE : 44_feature/store-username-and-user-id-on-user-context-and-use-them-on-task-create-and-on-dashboard-welcome
+        FE : 45_feature/use-charts-data-api-on-dashboard
+        BE : WORKING-ON 27_feature/modify-all-endpoints-to-use-tasks-data-that-linked-with-the-request-user
+        FE : TODO 46_feature/add-404-not-found-page
