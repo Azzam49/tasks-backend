@@ -168,5 +168,7 @@ Branches of main sections:
         BE : 26_feature/add-username-and-userid-on-token-api-response
         FE : 44_feature/store-username-and-user-id-on-user-context-and-use-them-on-task-create-and-on-dashboard-welcome
         FE : 45_feature/use-charts-data-api-on-dashboard
-        BE : WORKING-ON 27_feature/modify-all-endpoints-to-use-tasks-data-that-linked-with-the-request-user
-        FE : TODO 46_feature/add-404-not-found-page
+        BE : 27_feature/modify-all-endpoints-to-use-tasks-data-that-linked-with-the-request-user
+        FE : 46_feature/add-404-not-found-page
+        BE : 28_bugfix/fix-get-tags-api-to-return-both-id-and-name-on-response
+        FE : TODO 47_bugfix/fix-tag-value-on-task-create-and-update-apis
