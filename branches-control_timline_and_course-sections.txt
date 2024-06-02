@@ -39,7 +39,7 @@ Make sections of course including both videos on React & Django, to complete a s
 
 sections initial idea:
 
-TODO - Introduction
+TODO(at last) - Introduction
     - course intro lectures..
 
 TODO - Setup
@@ -65,7 +65,7 @@ DONE : - Tasks App Frontend | Integrating with the APIs
 DONE - Tasks App (Authentication & React Pages)
     - token api, react login/register, permissions control based on user
 
-WORKING-ON - Tasks App (Dashboard Page & Charts)
+DONE - Tasks App (Dashboard Page & Charts)
     - create react components(charts, statics...) with static data on dashboard page
         *charts are:
             - 3 card info (total no. of tasks, no. pending tasks, no. completed tasks)
@@ -78,7 +78,10 @@ WORKING-ON - Tasks App (Dashboard Page & Charts)
     - fix token-auth endpoint to return username on json response , store it on user context and use it on dashboard welcome message
     - add 404 page
 
-TODO- Tasks App (Admin Pages)
+WORKING-ON - Deploying Our App
+    - find out how to deploy the app by django, and to make react served from django side
+
+TODO (seems to delay in future)- Tasks App (Admin Pages)
     - create apis related to admin pages actions (create/delete tags, change users status, read logs)
 
 
@@ -158,7 +161,7 @@ Branches of main sections:
         FE : 39_feature/add-and-integrate-register-user-page
             BE(together with FE 39_feature/..) : 23_feature/remove-authentication-required-from-register-user-api
 
-    - (WORKING-ON) Tasks App (Dashboard Page & Charts)
+    - DONE - Tasks App (Dashboard Page & Charts)
         FE : 40_feature/dashboard-page-adding-card-component
         FE : 41_feature/dashboard-page-adding-charts
         FE : 42_bugfix/fix-empty-space-on-pages-on-mobile-screens
@@ -172,3 +175,8 @@ Branches of main sections:
         FE : 46_feature/add-404-not-found-page
         BE : 28_bugfix/fix-get-tags-api-to-return-both-id-and-name-on-response-and-tag-id-on-get-task-api-response
         FE : 47_bugfix/fix-tag-value-on-task-create-and-update-apis
+
+
+    - WORKING-ON - Deploying Our App
+        BE : 29_feature/fixes-for-deployment-integrating-react-into-django
+        FE : 48_feature/fixes-for-deployment
