@@ -135,6 +135,7 @@ STATIC_URL = '/static/'
 # specfically allow the react url
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "http://azzam49.pythonanywhere.com",
 ]
 
 REST_FRAMEWORK = {
