@@ -62,3 +62,5 @@ urlpatterns += [
     path('', redirect_to_ui),
     path('/', redirect_to_ui),
 ]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
