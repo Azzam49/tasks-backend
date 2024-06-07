@@ -136,6 +136,7 @@ STATIC_URL = '/static/'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "http://azzam49.pythonanywhere.com",
+    "https://azzam49.pythonanywhere.com",
 ]
 
 REST_FRAMEWORK = {
