@@ -25,6 +25,9 @@ from rest_framework_simplejwt.serializers import (
 from django.views.generic import TemplateView
 from django.shortcuts import redirect
 
+from django.conf.urls.static import static
+from django.conf import settings
+
 
 class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     def validate(self, attrs):
