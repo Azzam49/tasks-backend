@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 from datetime import timedelta
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +27,11 @@ SECRET_KEY = 'nw5fvs@($2y%bi+r@o18yz=@^2h^kgv6#1$=@-=73fws(ivq%s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'azzam49.pythonanywhere.com',
+    'localhost',
+]
 
 
 # Application definition
@@ -45,6 +50,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -59,7 +65,7 @@ ROOT_URLCONF = 'tasks.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'build')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -129,6 +135,8 @@ STATIC_URL = '/static/'
 # specfically allow the react url
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "http://azzam49.pythonanywhere.com",
+    "https://azzam49.pythonanywhere.com",
 ]
 
 REST_FRAMEWORK = {
@@ -142,3 +150,10 @@ SIMPLE_JWT = {
     # controls for how long the token can be used
     "ACCESS_TOKEN_LIFETIME": timedelta(days=1), #minutes/seconds
 }
+
+#Add new:
+# only for production or testing serving react from within django from local
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'build/static')
+]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

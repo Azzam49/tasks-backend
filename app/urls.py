@@ -1,6 +1,6 @@
 from django.urls import path
 from app.views import (
-    home,
+    # home,
     tag_list,
     task_list,
     create_task,
@@ -15,7 +15,7 @@ from app.views import (
 )
 
 urlpatterns = [
-    path('', home, name='home'),
+    # path('', home, name='home'),
     path('get/tags/', tag_list, name='tag-list'),
     path('get/tasks/', task_list, name='task-list'),
     path('get/pending-tasks/', task_pending_list, name='task-pending-list'),

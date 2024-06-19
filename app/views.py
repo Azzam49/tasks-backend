@@ -20,8 +20,8 @@ from .serializers import (
     SingleTaskSerializer,
 )
 
-def home(request):
-    return HttpResponse("Hello World")
+# def home(request):
+#     return HttpResponse("Hello World")
 
 
 @api_view(['GET'])

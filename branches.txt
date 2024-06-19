@@ -244,8 +244,16 @@ BRANCH : 27_feature/modify-all-endpoints-to-use-tasks-data-that-linked-with-the-
 STATUS : DONE
 BRANCH : 28_bugfix/fix-get-tags-api-to-return-both-id-and-name-on-response-and-tag-id-on-get-task-api-response
 
-Have 2 PRs (26 & 27)
-- Fix get tags api so that response include both id and tag name and not only tag name
+Have 2 PRs (23 & 24)
+- Fix get tags api so that response include both id and tag name and not only tag name Fix get tags api so that response include both id and tag name and not only tag name and fix on get task api response
+---------------------------------------------------------------------
+
+
+---------------------------------------------------------------------
+STATUS : DONE
+BRANCH : 29_feature/fixes-for-deployment-integrating-react-into-django
+
+- Fixes for deployment which is allowed_hosts, urls, whitenoise, templates folder and staticfiles
 ---------------------------------------------------------------------
 
 
